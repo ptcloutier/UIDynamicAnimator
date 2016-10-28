@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="grid.png" translatesAutoresizingMaskIntoConstraints="NO" id="e6D-yR-pcT" userLabel="grid"/>
+                            <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="color1.png" translatesAutoresizingMaskIntoConstraints="NO" id="9QD-mI-PDh" userLabel="fallingItem" customClass="CircularObject">
+                                <frame key="frameInset" minX="167" minY="125" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.90588235294117647" green="0.90588235294117647" blue="0.90588235294117647" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="color1.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ufe-Qj-h38" userLabel="bottomItem" customClass="CircularObject">
+                                <frame key="frameInset" minX="132" minY="557" width="110" height="110"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="55"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="e6D-yR-pcT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="5XI-kK-jT2"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="e6D-yR-pcT" secondAttribute="bottom" id="QN5-fC-IMf"/>
+                            <constraint firstItem="e6D-yR-pcT" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="QtA-B1-IkU"/>
+                            <constraint firstAttribute="trailing" secondItem="e6D-yR-pcT" secondAttribute="trailing" id="SK5-ct-ucf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bottomItem" destination="Ufe-Qj-h38" id="C46-8R-ZTc"/>
+                        <outlet property="fallingItem" destination="9QD-mI-PDh" id="ntg-uS-DaR"/>
+                        <outlet property="gridBoard" destination="e6D-yR-pcT" id="b9h-Qe-BU8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="color1.png" width="785" height="768"/>
+        <image name="grid.png" width="1600" height="1196"/>
+    </resources>
+</document>
